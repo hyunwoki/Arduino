@@ -18,3 +18,14 @@ rule "garage door closeopen"
 	then
 		sendCommand(itm_park_door_mqtt_act, OFF)
 end
+
+
+
+
+
+rule "PowerMeter"
+	when
+		Item itm_park_garage_btn received update
+	then
+		sendCommand(itm_park_door_mqtt_act, OFF)
+end
